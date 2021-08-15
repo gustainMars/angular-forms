@@ -15,6 +15,15 @@ export class TemplateDrivenComponent implements OnInit {
     comfirmarEmail: ''
   };
 
+  endereco = {
+    logradouro: '',
+    numero: '',
+    complemento: '',
+    cidade: '',
+    estado: '',
+    cep: ''
+  };
+
   constructor() { }
 
   ngOnInit(): void {
@@ -23,5 +32,7 @@ export class TemplateDrivenComponent implements OnInit {
   // tslint:disable-next-line: typedef
   onSubmit(formulario: NgForm){
     console.log(formulario);
+    console.log(this.dados);
+
   }
 }

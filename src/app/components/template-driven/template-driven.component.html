@@ -1,20 +1,48 @@
 <form #formulario="ngForm" (submit)="onSubmit(formulario)">
+  <div ngModelGroup="dados">
     <label>
-        <p>Nome</p>
-        <input type="text" name="nome" ngModel/>
+      <p>Nome</p>
+      <input type="text" name="nome" [(ngModel)]="dados.nome"/>
     </label>
     <label>
-        <p>Idade</p>
-        <input type="number" name="idade" ngModel/>
+      <p>Idade</p>
+      <input type="number" name="idade" [(ngModel)]="dados.idade"/>
     </label>
     <label>
-        <p>E-mail</p>
-        <input type="text" name="email" ngModel/>
+      <p>E-mail</p>
+      <input type="text" name="email" [(ngModel)]="dados.email"/>
     </label>
     <label>
-        <p>Confirmar E-mail</p>
-        <input type="text" name="confirmarEmail" ngModel/>
+      <p>Confirmar E-mail</p>
+      <input type="text" name="confirmarEmail" [(ngModel)]="dados.comfirmarEmail"/>
     </label>
+  </div>
 
-    <button type="submit">Enviar</button>
+  <div ngModelGroup="endereco">
+    <label>
+        <p>Logradouro</p>
+        <input type="text" name="logradouro" [(ngModel)]="endereco.logradouro"/>
+      </label>
+      <label>
+        <p>Número</p>
+        <input type="number" name="numero" [(ngModel)]="endereco.numero"/>
+      </label>
+      <label>
+        <p>Complemento</p>
+        <input type="text" name="complemento" [(ngModel)]="endereco.complemento"/>
+      </label>
+      <label>
+        <p>Cidade</p>
+        <input type="text" name="cidade" [(ngModel)]="endereco.cidade"/>
+      </label>
+      <label>
+        <p>Estado</p>
+        <input type="text" name="estado" [(ngModel)]="endereco.estado"/>
+      </label>
+      <label>
+        <p>CEP</p>
+        <input type="text" name="cep" [(ngModel)]="endereco.cep"/>
+      </label>
+  </div>
+  <button type="submit">Enviar</button>
 </form>
